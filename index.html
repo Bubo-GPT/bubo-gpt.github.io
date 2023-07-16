@@ -114,7 +114,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Bubo GPT</h1>
+            <h1 class="title is-1 publication-title"><img id="painting_icon" width="5%" src="./images/logo.png"> Bubo GPT</h1>
             <h3 class="title is-3 publication-title">BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs</h3>
             <div class="is-size-5">
               <span class="author-block">
@@ -124,9 +124,6 @@
 		      <a href="https://scholar.google.com/citations?user=xXMj6_EAAAAJ&hl=zh-CN" style="color:#f68946;font-weight:normal;">Zhijie Lin<sup>*</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Bingyi Kang<sup>*+</sup></a>,
-              </span>
-              <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=DdCAbWwAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Daquan Zhou</a>,
               </span>
               <span class="author-block">
@@ -134,6 +131,9 @@
               </span>
               <span class="author-block">
                 <a href="https://sites.google.com/site/jshfeng/" style="color:#f68946;font-weight:normal;">Jiashi Feng</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Bingyi Kang<sup>*+</sup></a>,
               </span>
             </div>
 
@@ -225,11 +225,11 @@
     </div>
   </section>
 
-  <section class="section"  style="background-color:#efeff081">
-    <div class="container is-max-desktop" id="gradio">
-      <gradio-app src="https://llava.hliu.cc"></gradio-app>
-    </div>
-  </section>
+<!--  <section class="section"  style="background-color:#efeff081">-->
+<!--    <div class="container is-max-desktop" id="gradio">-->
+<!--      <gradio-app src="https://llava.hliu.cc"></gradio-app>-->
+<!--    </div>-->
+<!--  </section>-->
 
   <section class="section"  style="background-color:#efeff081">
     <div class="container is-max-desktop">
@@ -271,19 +271,17 @@
     <div class="column is-full-width">
       <div class="content has-text-justified">
         <p>
-          Due to the scaling up of training data and model size,
-		large language models have demonstrated remarkable abilities across various linguistic
-		tasks in a few-shot and zero-shot manner and also enabled conversational communication with
-		humans. To leverage the powerful linguistic abilities of LLMs, some methods [20, 21 ] propose to
-		connect different accessedation models for multi-modal tasks by using LLMs as a dispatch scheduler.
+          As the figure shown, we perform joint multi-modal understanding and chatting for text, vision and audio,
+          which is achieved by learning a shared representation space that aligns well with pre-trained <a href="https://github.com/lm-sys/FastChat">Vicuna</a>.
+          We also build an off-the-shelf visual grounding pipeline to explore the fine-grained relation between different visual objects and modalities.
 		<figure style="text-align: center;">
           <img id="teaser" width="100%" src="images/bubogpt.png">  
           <figcaption>
-            Instruction: Detailed Description  [<a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_instruction_verb_noun_0.html">0</a>]
+            The framework of BuboGPT.
           </figcaption>
         </figure>
-		Please check out ``LLaVA-Instruct-150K''' on 
-          <a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K">[HuggingFace Dataset]</a>.
+<!--		Please check out ``LLaVA-Instruct-150K''' on -->
+<!--          <a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K">[HuggingFace Dataset]</a>.-->
 
 <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
 <style>
@@ -310,97 +308,97 @@
   </style>
   
   <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
-  <div class="column is-six-fifths" width="80%">
-  <table class="GeneratedTable">
-    <thead>
-      <tr>
-        <th>Data file name</th>
-        <th>File Size</th>
-        <th>Sample Size</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/conversation_58k.json">conversation_58k.json</a> </td>
-        <td>126 MB</td>
-        <td>58K</td>
-      </tr>
-      <tr>
-        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/detail_23k.json">detail_23k.json</a></td>
-        <td>20.5 MB</td>
-        <td>23K</td>
-      </tr>
-      <tr>
-        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/complex_reasoning_77k.json">complex_reasoning_77k.json</a></td>
-        <td>79.6 MB</td>
-        <td>77K</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <!-- Codes by Quackit.com -->
-  
-        </p>
-        <p>
-          For each subset, we visualize the root noun-verb pairs for the instruction and response. For each chart, please click the link for the interactive page to check out the noun-verb pairs whose frequency is higher the given number.        
-        </p>
-      </div>
+<!--  <div class="column is-six-fifths" width="80%">-->
+<!--  <table class="GeneratedTable">-->
+<!--    <thead>-->
+<!--      <tr>-->
+<!--        <th>Data file name</th>-->
+<!--        <th>File Size</th>-->
+<!--        <th>Sample Size</th>-->
+<!--      </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      <tr>-->
+<!--        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/conversation_58k.json">conversation_58k.json</a> </td>-->
+<!--        <td>126 MB</td>-->
+<!--        <td>58K</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/detail_23k.json">detail_23k.json</a></td>-->
+<!--        <td>20.5 MB</td>-->
+<!--        <td>23K</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td><a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/raw/main/complex_reasoning_77k.json">complex_reasoning_77k.json</a></td>-->
+<!--        <td>79.6 MB</td>-->
+<!--        <td>77K</td>-->
+<!--      </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+<!--  &lt;!&ndash; Codes by Quackit.com &ndash;&gt;-->
+<!--  -->
+<!--        </p>-->
+<!--        <p>-->
+<!--          For each subset, we visualize the root noun-verb pairs for the instruction and response. For each chart, please click the link for the interactive page to check out the noun-verb pairs whose frequency is higher the given number.        -->
+<!--        </p>-->
+<!--      </div>-->
 
-  
-
-
-
-
-      <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">  
-        <figure style="text-align: center;">
-          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_50.png">  
-          <figcaption>
-            Instruction: Conversation [<a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_50.html">50</a>]
-          </figcaption>
-        </figure>
-        <figure style="text-align: center;">
-          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/detail_23k_instruction_verb_noun_0.png">  
-          <figcaption>
-            Instruction: Detailed Description  [<a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_instruction_verb_noun_0.html">0</a>]
-          </figcaption>
-        </figure>
-        <figure style="text-align: center;">
-          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_50.png">  
-          <figcaption>
-            Instruction: Complex Reasoning   [<a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_50.html">50</a>]
-          </figcaption>
-        </figure>
-      </div>
-      </div>  
+<!--  -->
 
 
 
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">  
-          <figure style="text-align: center;">
-            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_50.png">  
-            <figcaption>
-              Response: Conversation [<a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_50.html">50</a>]
-            </figcaption>
-          </figure>
-          <figure style="text-align: center;">
-            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_50.png">  
-            <figcaption>
-              Response: Detailed Description  [<a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_50.html">50</a>]
-            </figcaption>
-          </figure>
-          <figure style="text-align: center;">
-            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_50.png">  
-            <figcaption>
-              Response: Complex Reasoning   [<a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_50.html">50</a>]
-            </figcaption>
-          </figure>
-        </div>
-        </div>      
 
-    </div>
-  </div>
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">  -->
+<!--        <figure style="text-align: center;">-->
+<!--          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_50.png">  -->
+<!--          <figcaption>-->
+<!--            Instruction: Conversation [<a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_50.html">50</a>]-->
+<!--          </figcaption>-->
+<!--        </figure>-->
+<!--        <figure style="text-align: center;">-->
+<!--          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/detail_23k_instruction_verb_noun_0.png">  -->
+<!--          <figcaption>-->
+<!--            Instruction: Detailed Description  [<a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_instruction_verb_noun_0.html">0</a>]-->
+<!--          </figcaption>-->
+<!--        </figure>-->
+<!--        <figure style="text-align: center;">-->
+<!--          <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_50.png">  -->
+<!--          <figcaption>-->
+<!--            Instruction: Complex Reasoning   [<a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_instruction_verb_noun_50.html">50</a>]-->
+<!--          </figcaption>-->
+<!--        </figure>-->
+<!--      </div>-->
+<!--      </div>  -->
+
+
+
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">  -->
+<!--          <figure style="text-align: center;">-->
+<!--            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_50.png">  -->
+<!--            <figcaption>-->
+<!--              Response: Conversation [<a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_response_verb_noun_50.html">50</a>]-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+<!--          <figure style="text-align: center;">-->
+<!--            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_50.png">  -->
+<!--            <figcaption>-->
+<!--              Response: Detailed Description  [<a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/detail_23k_response_verb_noun_50.html">50</a>]-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+<!--          <figure style="text-align: center;">-->
+<!--            <img id="teaser" width="100%" src="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_50.png">  -->
+<!--            <figcaption>-->
+<!--              Response: Complex Reasoning   [<a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/complex_reasoning_77k_response_verb_noun_50.html">50</a>]-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+<!--        </div>-->
+<!--        </div>      -->
+
+<!--    </div>-->
+<!--  </div>-->
 
 
 </section>
@@ -410,7 +408,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> BuboGPT: Large Language-and-Vision Assistant</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> BuboGPT: Training Procedure</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -421,26 +419,30 @@
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
         <p>
-          LLaVa connects pre-trained <a href="https://openai.com/research/clip">CLIP ViT-L/14</a> visual encoder and large language model <a href="https://github.com/lm-sys/FastChat">Vicuna</a>, using a simple projection matrix.   We consider a two-stage instruction-tuning procedure:
+          BuboGPT connects different modality Q-Former with pre-trained large language model <a href="https://github.com/lm-sys/FastChat">Vicuna</a>, using a simple projection matrix.   We consider a two-stage instruction-tuning procedure:
           <ul type="1">
-            <li><b>Stage 1: Pre-training for Feature Alignment</b>. <span style="font-size: 95%;">Only the projection matrix is updated, based on a subset of CC3M.</span></li>
-            <li><b>Stage 2: Fine-tuning End-to-End.</b>. <span style="font-size: 95%;">Both the projection matrix and LLM are updated for two different use senarios: 
+            <li><b>Stage 1:  Single-modal Pre-training</b>. <span style="font-size: 95%;">We train the corresponding modality Q-Former and linear projection layer on a large number of modality-text paired
+data.</span></li>
+            <li><b>Stage 2:  Multi-Modal Instruct Tuning</b>. <span style="font-size: 95%;">We curate a high-quality multi-modal instruction-following
+dataset to fine tune only the linear projection layer:
               <ul type="1">
-                <li> <b>Visual Chat</b>: LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications. 
-                <li> <b>Science QA</b>: LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain.</span></li>
+                <li> <b>Image-Text</b>: We employ two previously published datasets from <a href="https://minigpt-4.github.io/">MiniGPT-4</a> and <a href="https://llava-vl.github.io/">LLaVa</a> for visual instruct tuning.</li>
+                <li> <b>Audio-Text</b>: We build a series of expressive and descriptive data to facilitate this process based on <a href="https://arxiv.org/abs/1910.09387">Clotho</a> dataset.</span></li>
+                <li> <b>Audio-Image-Text</b>: We build &lt;audio, image, text&gt; pairs to act as triple-modality instruction tuning dataset based on <a href="https://arxiv.org/abs/2104.02691">VGGSS</a> dataset
+                  and further introduce negative set to enhance our model.</span></li>
               </ul>  
           </ul>  
-          Please check out ``LLaVA-13b-delta-v0'' model checkpoint on 
-          <a href="https://huggingface.co/liuhaotian/LLaVA-13b-delta-v0">[HuggingFace Models]</a>.
+<!--          Please check out ``LLaVA-13b-delta-v0'' model checkpoint on -->
+<!--          <a href="https://huggingface.co/liuhaotian/LLaVA-13b-delta-v0">[HuggingFace Models]</a>.-->
         </p>
       </div>
-      <centering>
-        <div style="text-align: center;">
-          <img id="teaser" width="70%" src="images/llava_arch.png">     
-        </div>
+<!--      <centering>-->
+<!--        <div style="text-align: center;">-->
+<!--          <img id="teaser" width="70%" src="images/llava_arch.png">     -->
+<!--        </div>-->
 
-      
-      </centering>           
+<!--      -->
+<!--      </centering>           -->
     </div>
   </div>
 
@@ -461,36 +463,36 @@
 
   <!-- </div> -->
   <!--/ Results. -->    
-<div class="container is-max-desktop">
+<!--<div class="container is-max-desktop">-->
 
 
-  <!-- Grounedtext2img. -->
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> <span style="font-size: 100%;">Visual Chat:</span> Towards building multimodal GPT-4 level chatbot  </h2>
-      
-      <div>
-        <a href="https://plotly.com/~lichunyuan24/5/?share_key=d78QObaCAYCIy8PJpe3gd1" target="_blank" title="llava_gpt4_pie" style="display: block; text-align: center;">  <img id="painting_icon" width="90%" src="images/pie_llava_gpt4.png"> </a>
+<!--  &lt;!&ndash; Grounedtext2img. &ndash;&gt;-->
+<!--  <div class="columns is-centered">-->
+<!--    <div class="column is-full-width">-->
+<!--      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> <span style="font-size: 100%;">Visual Chat:</span> Towards building multimodal GPT-4 level chatbot  </h2>-->
+<!--      -->
+<!--      <div>-->
+<!--        <a href="https://plotly.com/~lichunyuan24/5/?share_key=d78QObaCAYCIy8PJpe3gd1" target="_blank" title="llava_gpt4_pie" style="display: block; text-align: center;">  <img id="painting_icon" width="90%" src="images/pie_llava_gpt4.png"> </a>-->
 
-    </div>
+<!--    </div>-->
 
-    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               
-    </div>
-  </div>
+<!--    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               -->
+<!--    </div>-->
+<!--  </div>-->
 
-  <!-- Grounedtext2img. -->
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-4"> <img id="painting_icon" width="3%" src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;"> Science QA:</span> New SoTA with the synergy of LLaVA with GPT-4</h2>
-      
-      <div>
-        <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img id="painting_icon" width="65%" src="images/bar_llava_gpt4_scienceqa.png"></a>
-        <script data-plotly="lichunyuan24:1" sharekey-plotly="v4opE3TJpxqQ08RYsDD4iv" src="https://plotly.com/embed.js" async></script>
-    </div>
-        <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the juedge, to predict the final answer based on its own previous answers and the LLaVA answers. This ``GPT-4 as juedge'' scheme yields a new SOTA 92.53%.</b>
-              
-    </div>
-  </div>
+<!--  &lt;!&ndash; Grounedtext2img. &ndash;&gt;-->
+<!--  <div class="columns is-centered">-->
+<!--    <div class="column is-full-width">-->
+<!--      <h2 class="title is-4"> <img id="painting_icon" width="3%" src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;"> Science QA:</span> New SoTA with the synergy of LLaVA with GPT-4</h2>-->
+<!--      -->
+<!--      <div>-->
+<!--        <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img id="painting_icon" width="65%" src="images/bar_llava_gpt4_scienceqa.png"></a>-->
+<!--        <script data-plotly="lichunyuan24:1" sharekey-plotly="v4opE3TJpxqQ08RYsDD4iv" src="https://plotly.com/embed.js" async></script>-->
+<!--    </div>-->
+<!--        <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the juedge, to predict the final answer based on its own previous answers and the LLaVA answers. This ``GPT-4 as juedge'' scheme yields a new SOTA 92.53%.</b>-->
+<!--              -->
+<!--    </div>-->
+<!--  </div>-->
 </section>
 
 
@@ -504,34 +506,34 @@
     </div>
   </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-         <h2 class="title is-4">Visual Reasoning on two examples from <a href="https://arxiv.org/abs/2303.08774">OpenAI GPT-4 Technical Report</a></h2>
-      </div>
-      </div>  
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths">-->
+<!--         <h2 class="title is-4">Visual Reasoning on two examples from <a href="https://arxiv.org/abs/2303.08774">OpenAI GPT-4 Technical Report</a></h2>-->
+<!--      </div>-->
+<!--      </div>  -->
 
-    <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths">
-      <img id="teaser" width="35%" src="images/cmp_ironing.png">
-      <img id="teaser" width="38%" src="images/cmp_chicken_nugget.png">
-    </div>
-    </div>  
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--    <div class="column is-six-fifths">-->
+<!--      <img id="teaser" width="35%" src="images/cmp_ironing.png">-->
+<!--      <img id="teaser" width="38%" src="images/cmp_chicken_nugget.png">-->
+<!--    </div>-->
+<!--    </div>  -->
 
-  
+<!--  -->
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-         <h2 class="title is-4">Optical character recognition (OCR)</a></h2>
-      </div>
-      </div>  
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths">-->
+<!--         <h2 class="title is-4">Optical character recognition (OCR)</a></h2>-->
+<!--      </div>-->
+<!--      </div>  -->
 
-    <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
-        <img id="teaser" width="32%" src="images/ocr/llava_example_cvpr2023.png">
-        <img id="teaser" width="32%" src="images/ocr/llava_example_cvinw_logo.png">
-        <img id="teaser" width="32%" src="images/ocr/example_llava_exmaple.png">
-    </div>
-    </div>  
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--    <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">-->
+<!--        <img id="teaser" width="32%" src="images/ocr/llava_example_cvpr2023.png">-->
+<!--        <img id="teaser" width="32%" src="images/ocr/llava_example_cvinw_logo.png">-->
+<!--        <img id="teaser" width="32%" src="images/ocr/example_llava_exmaple.png">-->
+<!--    </div>-->
+<!--    </div>  -->
 
   
 
@@ -577,9 +579,9 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>
   @article{liu2023llava,
-    author      = {Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
-    title       = {Visual Instruction Tuning},
-    publisher   = {arXiv:2304.08485},
+    author      = {Yang Zhao and Zhijie Lin and Daquan Zhou and Zilong Huang and Jiashi Feng and Bingyi Kang},
+    title       = {BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs},
+    publisher   = {},
     year        = {2023}
   }
   </code></pre>
@@ -589,24 +591,24 @@
   <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgement</h2>
-      <p>
-        This website is adapted from <a
-        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-        Commons Attribution-ShareAlike 4.0 International License</a>.  We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.
-      </p>
+<!--      <p>-->
+<!--        This website is adapted from <a-->
+<!--        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative-->
+<!--        Commons Attribution-ShareAlike 4.0 International License</a>.  We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.-->
+<!--      </p>-->
 
-      <p>
-<b>Usage and License Notices</b>: The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
-</p>
+<!--      <p>-->
+<!--<b>Usage and License Notices</b>: The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.-->
+<!--</p>-->
 
-      <p>
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a> 
-      Related Links: 
-      <a href='https://react-vl.github.io/'>[REACT]</a>  
-      <a href='https://gligen.github.io/'>[GLIGEN]</a> 
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'>[Computer Vision in the Wild (CVinW)]</a> 
-      <a href='https://instruction-tuning-with-gpt-4.github.io/'>[Insutrction Tuning with GPT-4]</a>      
-      </p>    
+<!--      <p>-->
+<!--      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a> -->
+<!--      Related Links: -->
+<!--      <a href='https://react-vl.github.io/'>[REACT]</a>  -->
+<!--      <a href='https://gligen.github.io/'>[GLIGEN]</a> -->
+<!--      <a href='https://github.com/Computer-Vision-in-the-Wild/'>[Computer Vision in the Wild (CVinW)]</a> -->
+<!--      <a href='https://instruction-tuning-with-gpt-4.github.io/'>[Insutrction Tuning with GPT-4]</a>      -->
+<!--      </p>    -->
     </div>
   </section>
 
