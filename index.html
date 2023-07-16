@@ -157,7 +157,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/haotian-liu/LLaVA" target="_blank"
+                  <a href="https://github.com/magic-research/bubogpt" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -242,8 +242,8 @@
               LLMs have demonstrated remarkable abilities at interacting with humans through language, especially with the usage of instruction-following data. Recent advancements in LLMs, such as MiniGPT-4, LLaVA, and X-LLM, further enlarge their abilities by incorporating multi-modal inputs, including image, video, and speech. 
 		    Despite their effectiveness at generating precise and detailed language understanding of the given modality signal, these LLMs give up the ability to ground specific parts of inputs, thus only constructing a coarse-grained mapping. However, explicit and informative correspondence between text and other modalities will not only improve the user experience but also help to expand the application scenario of multi-modal LLMs.
               <ol type="1">
-                <li><b>BuboGPT Architecture </b>. <span style="font-size: 95%;">We construct a high-quality multi-modal instruction-tuning dataset including fine-grained audio descriptions and cross-modal sound localization, and introduce both positive and negative image-audio pairs for semantic matching to facilitate the cross-modal understanding. </span></li>
-                <li><b>Multimodal Instruct Data.</b>. <span style="font-size: 95%;">We introduce <it><b>LLaVA</b> (<b>L</b>arge <b>L</b>anguage-<b>a</b>nd-<b>V</b>ision <b>A</b>ssistant)</it>, an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding.</li>
+                <li><b>BuboGPT Architecture </b>. <span style="font-size: 95%;">We build a multi-modal LLM, BuboGPT for multi-modal understanding including image, audio and text by learning a common semantic space and further explore the fine-grained relation between different visual objects and different modalities. </span></li>
+                <li><b>Multimodal Instruct Data</b>. <span style="font-size: 95%;">We construct a high-quality multi-modal instruction-tuning dataset including fine-grained audio descriptions and cross-modal sound localization, and introduce both positive and negative image-audio pairs for semantic matching to facilitate the cross-modal understanding..</li>
               </ol>  
            </p>
   
@@ -502,8 +502,59 @@ dataset to fine tune only the linear projection layer:
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> Examples on Visual Instruction Following</h2>
+      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Examples on Fine-grained Visual Understanding</h2>
     </div>
+  </div>
+
+  <div class="container mt-5 is-centered">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-1.jpg">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-2.jpg">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-3.jpg">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-4.jpg">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-5.jpg">
+    <img id="painting_icon" width="45%" src="./images/vision/Pic-6.jpg">
+  </div>
+
+  <br>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Examples on Audio Understanding</h2>
+    </div>
+  </div>
+
+  <div class="container mt-5 is-centered">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-1.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-2.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-3.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-4.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-5.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio/Aud-6.jpg">
+  </div>
+
+  <br>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Examples on Aligned audio-image understanding</h2>
+    </div>
+  </div>
+
+  <div class="container mt-5 is-centered">
+    <img id="painting_icon" width="45%" src="./images/audio-image-aligned/Pic-Aud-1.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio-image-aligned/Pic-Aud-2.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio-image-aligned/Pic-Aud-3.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio-image-aligned/Pic-Aud-4.jpg">
+  </div>
+
+  <br>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Examples on Arbitrary audio-image understanding</h2>
+    </div>
+  </div>
+
+  <div class="container mt-5 is-centered">
+    <img id="painting_icon" width="45%" src="./images/audio-image-unaligned/Pic-Aud-5.jpg">
+    <img id="painting_icon" width="45%" src="./images/audio-image-unaligned/Pic-Aud-6.jpg">
   </div>
 
 <!--    <div class="columns is-centered has-text-centered">-->
@@ -540,38 +591,38 @@ dataset to fine tune only the linear projection layer:
   
 
 
-  <div class="container mt-5">
-    <!-- <h2 class="text-center mb-5">Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots</h2> -->
-    <!-- Selection -->
-    <div class="form-row" style="justify-content: flex-end;">
-      <div class="form-group col-md-1">
-        <div class="col-md-2" style="width: 100%"><label>&nbsp;</label></div>
-        <div class="btn-group" role="group" aria-label="Left and Right Controller"
-          style="width: 100%;align-items: flex-end;justify-content: center;flex-direction: row;display: flex;">
-          <button type="button" class="form-control btn btn-primary" id="prev-question"><i
-              class="material-icons">keyboard_arrow_left</i></button>
-          <button type="button" class="form-control btn btn-primary" id="next-question"><i
-              class="material-icons">keyboard_arrow_right</i></button>
+<!--  <div class="container mt-5">-->
+<!--    &lt;!&ndash; <h2 class="text-center mb-5">Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots</h2> &ndash;&gt;-->
+<!--    &lt;!&ndash; Selection &ndash;&gt;-->
+<!--    <div class="form-row" style="justify-content: flex-end;">-->
+<!--      <div class="form-group col-md-1">-->
+<!--        <div class="col-md-2" style="width: 100%"><label>&nbsp;</label></div>-->
+<!--        <div class="btn-group" role="group" aria-label="Left and Right Controller"-->
+<!--          style="width: 100%;align-items: flex-end;justify-content: center;flex-direction: row;display: flex;">-->
+<!--          <button type="button" class="form-control btn btn-primary" id="prev-question"><i-->
+<!--              class="material-icons">keyboard_arrow_left</i></button>-->
+<!--          <button type="button" class="form-control btn btn-primary" id="next-question"><i-->
+<!--              class="material-icons">keyboard_arrow_right</i></button>-->
 
-        </div>
-      </div>
-    </div>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <!-- Question Card -->
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <div class="card mb-4" style="width: 100%; display: flex; align-items: center;">
-        <!-- <p><b>Description:</b> Monalisa is a famous painting by Leonardo da Vinci. </p> -->
+<!--    &lt;!&ndash; Question Card &ndash;&gt;-->
+<!--    <div style="display: flex; justify-content: center; align-items: center;">-->
+<!--      <div class="card mb-4" style="width: 100%; display: flex; align-items: center;">-->
+<!--        &lt;!&ndash; <p><b>Description:</b> Monalisa is a famous painting by Leonardo da Vinci. </p> &ndash;&gt;-->
 
-        <div class="card-body" id="selected-question" style="display: flex; height: 80vh;">
-          <div class="chat-history">
-            <!-- Add your chat messages here -->
-          </div>
+<!--        <div class="card-body" id="selected-question" style="display: flex; height: 80vh;">-->
+<!--          <div class="chat-history">-->
+<!--            &lt;!&ndash; Add your chat messages here &ndash;&gt;-->
+<!--          </div>-->
 
-        </div>
-      </div>
-    </div>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-  </div>
+<!--  </div>-->
 </section>
 
   <section class="section" id="BibTeX">
